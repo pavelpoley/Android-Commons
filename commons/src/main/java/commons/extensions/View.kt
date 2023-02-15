@@ -1,6 +1,7 @@
 package commons.extensions
 
 import android.view.View
+import androidx.core.content.ContextCompat
 
 fun View.visible() {
     visibility = View.VISIBLE
@@ -20,4 +21,8 @@ fun View.invisible() {
 
 fun View.invisibleIf(condition: Boolean) {
     visibility = if (condition) View.INVISIBLE else View.VISIBLE
+}
+
+fun View.getColor(resId: Int): Int {
+    return ContextCompat.getColor(context, resId)
 }
